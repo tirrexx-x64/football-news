@@ -92,10 +92,11 @@ def show_main(request):
         'name' : 'Tirta Rendy Siahaan',
         'class' : 'PBP C',
         'news_list' : news_list,
-        'last_login' : request.COOKIES.get('last_login', 'Never')
+        'last_login' : request.user.last_login or 'Never'
     }
 
     return render(request, "main.html", context)
+
 
 def create_news(request):
     form = NewsForm(request.POST or None)
