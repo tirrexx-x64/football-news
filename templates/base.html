@@ -16,12 +16,19 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- DOMPurify -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+
     <!-- Global CSS -->
     <link rel="stylesheet" href="{% static 'css/global.css' %}"/>
   </head>
 
   <body>
     {% block content %}{% endblock content %}
+
+    <!-- Include Toast -->
+    {% include 'toast.html' %}
+    {% include 'modal.html' %}
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
