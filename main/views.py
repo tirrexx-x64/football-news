@@ -15,6 +15,7 @@ from django.views.decorators.http import require_POST
 from django.utils.html import strip_tags
 import requests
 from django.http import HttpResponse
+import json
 
 #Views
 
